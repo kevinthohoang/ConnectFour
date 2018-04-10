@@ -12,7 +12,7 @@ def _run_user_interface() -> None:
     print(connectfour_shared_methods.display_winner(current_game_state))
 
 def player_turn(game_state: connectfour.ConnectFourGameState) -> connectfour.ConnectFourGameState:
-    """
+    """ Contains the logic for a player's turn
     """
     while True:
         try:
