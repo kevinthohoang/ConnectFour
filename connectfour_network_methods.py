@@ -64,7 +64,7 @@ def send_move(connection: ConnectFourConnection, move: str) -> str:
         print(_expect_line(connection, ["READY"]))
 
 def _valid_action(move: str) -> bool:
-    """
+    """ Determine whether or not action is valid
     """
     if move.lower().startswith("drop") or move.lower().startswith("pop"):
         return True
@@ -72,7 +72,8 @@ def _valid_action(move: str) -> bool:
         return False
     
 def _expect_move(connection: ConnectFourConnection) -> str:
-    """
+    """ Expect computer to reply with DROP or POP move. Make sure they
+        respond appropriately.
     """
     line = _read_line(connection)
 
